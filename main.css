@@ -19,7 +19,7 @@ a:hover{
 }
 
 .bigbox{
-  height: 300px;
+  height: 350px;
   /*width: 200px;  */
   border-style: solid;
   padding: 5px;
@@ -27,7 +27,7 @@ a:hover{
 }
 
 .biggerbox{
-  height: 700px;
+  height: 550px;
   border-style: solid;
   padding: 5px;
   margin: 25px;
@@ -48,19 +48,15 @@ a:hover{
 }
 
 @keyframes jump {
-  from {
-    top:110px;
-  }
-  to {
-    top: 10px;
-  }
+  from {top:110px;}
+  to {top: 10px;}
 }
 
 img {
 	margin: 50px;
 }
 
-img:hover{
+.imgscale:hover{
   transform: scale(2);
   transform-origin: top left;
   transition-duration: 1s;
@@ -68,3 +64,29 @@ img:hover{
   animation-direction: alternate;
 }
 
+.imgrotate {
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+.element {
+	background-color: #0997d3;
+	width: 200px;
+	height: 200px;
+}
+
+.element:hover {
+	transform: translate(100%);
+  transform-origin: top left;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  animation-direction: alternate;
+}
